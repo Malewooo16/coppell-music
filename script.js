@@ -1,3 +1,21 @@
+// script.js
+document.addEventListener('DOMContentLoaded', () => {
+  window.addEventListener('load', () => {
+    const loadingOverlay = document.getElementById('loading-overlay');
+    loadingOverlay.style.display = 'none';
+
+    const content = document.getElementById('content');
+    if (content) {
+      content.style.display = 'block';
+    }
+
+    const firstSlide = document.querySelector('.slideshow-slide');
+    if (firstSlide) {
+      firstSlide.classList.add('active');
+    }
+  });
+});
+
 const slides = document.querySelectorAll('.slideshow-slide');
 let currentSlideIndex = 0;
 
